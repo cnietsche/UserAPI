@@ -9,11 +9,13 @@ public class NaturalPerson {
     private final UUID id;
     private String name;
     private LocalDate dateOfBirth;
+    private String personalIdentification;
 
-    public NaturalPerson(UUID id, String name, LocalDate dateOfBirth) {
+    public NaturalPerson(UUID id, String name, LocalDate dateOfBirth, String personalIdentification) {
         this.id = Objects.requireNonNull(id, "ID cannot be null");
         this.name = Objects.requireNonNull(name, "Name cannot be null");
         this.dateOfBirth = Objects.requireNonNull(dateOfBirth, "Date of Birth cannot be null");
+        this.personalIdentification = Objects.requireNonNull(personalIdentification, "Personal Identification cannot be null");
     }
 
     public UUID getId() {
@@ -34,6 +36,14 @@ public class NaturalPerson {
 
     public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = Objects.requireNonNull(dateOfBirth, "Date of Birth cannot be null");
+    }
+
+    public String getPersonalIdentification() {
+        return personalIdentification;
+    }
+
+    public void setPersonalIdentification(String personalIdentification) {
+        this.personalIdentification = Objects.requireNonNull(personalIdentification, "Personal Identification cannot be null");
     }
 
     @Override
