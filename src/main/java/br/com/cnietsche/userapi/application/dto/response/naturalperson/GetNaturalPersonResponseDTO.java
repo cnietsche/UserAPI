@@ -1,16 +1,16 @@
-package br.com.cnietsche.userapi.application.dto.naturalperson;
+package br.com.cnietsche.userapi.application.dto.response.naturalperson;
 
 import java.time.LocalDate;
 import java.util.UUID;
 
-public class UpdateNaturalPersonResponseDTO {
+public class GetNaturalPersonResponseDTO {
 
     private final UUID id;
     private final String name;
     private final String personalIdentification;
     private final LocalDate dateOfBirth;
 
-    public UpdateNaturalPersonResponseDTO(UUID id, String name, String personalIdentification, LocalDate dateOfBirth) {
+    public GetNaturalPersonResponseDTO(UUID id, String name, String personalIdentification, LocalDate dateOfBirth) {
         this.id = id;
         this.name = name;
         this.personalIdentification = personalIdentification;

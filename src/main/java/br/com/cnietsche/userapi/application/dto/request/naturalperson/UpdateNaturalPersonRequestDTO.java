@@ -1,19 +1,17 @@
-package br.com.cnietsche.userapi.application.dto.naturalperson;
+package br.com.cnietsche.userapi.application.dto.request.naturalperson;
 
 import java.time.LocalDate;
 import java.util.UUID;
 
-public class CreateNaturalPersonResponseDTO {
+public class UpdateNaturalPersonRequestDTO {
 
     private final UUID id;
     private final String name;
-    private final String personalIdentification;
     private final LocalDate dateOfBirth;
 
-    public CreateNaturalPersonResponseDTO(UUID id, String name, String personalIdentification, LocalDate dateOfBirth) {
+    public UpdateNaturalPersonRequestDTO(UUID id, String name, LocalDate dateOfBirth) {
         this.id = id;
         this.name = name;
-        this.personalIdentification = personalIdentification;
         this.dateOfBirth = dateOfBirth;
     }
 
@@ -23,10 +21,6 @@ public class CreateNaturalPersonResponseDTO {
 
     public String getName() {
         return name;
-    }
-
-    public String getPersonalIdentification() {
-        return personalIdentification;
     }
 
     public LocalDate getDateOfBirth() {

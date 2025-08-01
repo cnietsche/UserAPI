@@ -1,4 +1,4 @@
-package br.com.cnietsche.userapi.application.dto.user;
+package br.com.cnietsche.userapi.application.dto.response.user;
 
 import java.util.UUID;
 
